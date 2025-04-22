@@ -35,7 +35,7 @@
 ### 1. 레포 클론
 
 ```
-git clone https://github.com/your-username/colla-board.git
+git clone https://github.com/no-more-delay/colla-board-fe.git
 cd colla-board
 ```
 
