@@ -9,11 +9,13 @@
   --background-sidebar: #f3f4f6;
   --background-editor: #ffffff;
 
-  --text-secondary: #6b7280;
+  --text-light-gray: #eaeaea;
+  --text-dark-gray: #5e6572;
 
-  --border-light: #e5e7eb;
+  --border-primary: #e5e7eb;
 
-  --primary: oklch(0.65 0.1 240); /* 블루 포인트 */
+  --button-primary-background: #111827;
+  --button-primary-text: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -23,21 +25,29 @@
   --background-sidebar: #111827;
   --background-editor: #1a1a1a;
 
-  --text-secondary: #9ca3af;
+  --text-light-gray: #9ca3af;
+  --text-dark-gray: #6a7280;
 
-  --border-light: #374151;
+  --border-primary: #374151;
 
-  --primary: oklch(0.65 0.1 240); /* 블루 포인트 (변경 없음) */
+  --button-primary-background: #ffffff;
+  --button-primary-text: #111827;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-background-sidebar: var(--background-sidebar);
   --color-background-editor: var(--background-editor);
-  --color-text-secondary: var(--text-secondary);
-  --color-border-light: var(--border-light);
-  --color-primary: var(--primary);
+
+  --color-light-gray: var(--text-light-gray);
+  --color-dark-gray: var(--text-dark-gray);
+
+  --color-border-primary: var(--border-primary);
+
+  --color-button-primary-background: var(--button-primary-background);
+  --color-button-primary-text: var(--button-primary-text);
 }
 
 body {
