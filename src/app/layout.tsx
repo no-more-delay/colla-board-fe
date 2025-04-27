@@ -24,6 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.toggle(
+              "dark",
+              localStorage.theme === "dark" ||
+                (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+            );`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen`}
       >
