@@ -1,22 +1,53 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb; /* 연한 회색 */
+  --foreground: #111827; /* 진회색 */
+
+  --background-sidebar: #f3f4f6;
+  --background-editor: #ffffff;
+
+  --text-light-gray: #eaeaea;
+  --text-dark-gray: #5e6572;
+
+  --border-primary: #e5e7eb;
+
+  --button-primary-background: #111827;
+  --button-primary-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background: #1f2937; /* 어두운 남색 */
+  --foreground: #d1d5db; /* 밝은 회색 */
+
+  --background-sidebar: #111827;
+  --background-editor: #1a1a1a;
+
+  --text-light-gray: #9ca3af;
+  --text-dark-gray: #6a7280;
+
+  --border-primary: #374151;
+
+  --button-primary-background: #ffffff;
+  --button-primary-text: #111827;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background-sidebar: var(--background-sidebar);
+  --color-background-editor: var(--background-editor);
+
+  --color-light-gray: var(--text-light-gray);
+  --color-dark-gray: var(--text-dark-gray);
+
+  --color-border-primary: var(--border-primary);
+
+  --color-button-primary-background: var(--button-primary-background);
+  --color-button-primary-text: var(--button-primary-text);
 }
 
 body {
